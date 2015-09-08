@@ -1,11 +1,11 @@
 {
-  "name": "ui-select",
+  "name": "coursehero ui-select",
   "version": "0.12.1",
-  "homepage": "https://github.com/angular-ui/ui-select",
+  "homepage": "https://github.com/rhousworth/ui-select",
   "authors": [
     "AngularUI"
   ],
-  "description": "AngularJS ui-select",
+  "description": "CourseHero fork of AngularJS ui-select",
   "main": ["dist/select.js", "dist/select.css"],
   "license": "MIT",
   "ignore": [

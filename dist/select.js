@@ -1,7 +1,7 @@
 /*!
- * ui-select
- * http://github.com/angular-ui/ui-select
- * Version: 0.12.1 - 2015-09-08T01:19:30.899Z
+ * coursehero ui-select
+ * http://github.com/rhousworth/ui-select
+ * Version: 0.12.1 - 2015-09-08T02:11:50.430Z
  * License: MIT
  */
 
@@ -230,6 +230,14 @@ uis.directive('uiSelectChoices',
           var refreshDelay = scope.$eval(attrs.refreshDelay);
           $select.refreshDelay = refreshDelay !== undefined ? refreshDelay : uiSelectConfig.refreshDelay;
         });
+
+        attrs.$observe('enableGroupBy', function() {
+          var enableGroupBy = scope.$eval(attrs.enableGroupBy);
+          if (enableGroupBy !== undefined) {
+            $select.isGrouped = !!enableGroupBy;
+          }
+        });
+
       };
     }
   };

@@ -61,6 +61,14 @@ uis.directive('uiSelectChoices',
           var refreshDelay = scope.$eval(attrs.refreshDelay);
           $select.refreshDelay = refreshDelay !== undefined ? refreshDelay : uiSelectConfig.refreshDelay;
         });
+
+        attrs.$observe('enableGroupBy', function() {
+          var enableGroupBy = scope.$eval(attrs.enableGroupBy);
+          if (enableGroupBy !== undefined) {
+            $select.isGrouped = !!enableGroupBy;
+          }
+        });
+
       };
     }
   };
