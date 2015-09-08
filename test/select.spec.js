@@ -1279,11 +1279,13 @@ describe('ui-select tests', function() {
       it('should show search input when true', function() {
         setupSelectComponent(true, 'selectize');
         expect($(el).find('.ui-select-search')).not.toHaveClass('ng-hide');
+        expect($(el).find('.ui-select-search')[0].attributes['readonly']).toBeFalsy();
       });
 
       it('should hide search input when false', function() {
         setupSelectComponent(false, 'selectize');
-        expect($(el).find('.ui-select-search')).toHaveClass('ng-hide');
+        expect($(el).find('.ui-select-search')).not.toHaveClass('ng-hide');
+        expect($(el).find('.ui-select-search')[0].attributes['readonly']).toBeTruthy();
       });
 
     });
